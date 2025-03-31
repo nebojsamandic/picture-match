@@ -1,0 +1,42 @@
+.page {
+    background-color: white;
+    min-height: 100vh;
+}
+
+.puzzle__start {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(..//images/puzzle__start-background.jpg);
+    display: flex;
+    justify-content: space-around;
+}
+
+.puzzle__start_button {
+    font-size: large;
+    margin: 250px;
+    width: 253px;
+    height: 43px;
+    background-color: yellow;
+    opacity: 0.6;
+    transition: transform 0.2s ease;
+    animation: growShrink 1.5s infinite alternate;
+}
+
+.puzzle__start_button:hover {
+    opacity: 100%;
+    cursor: pointer;
+    transform:scale(1.05);
+}
+
+@keyframes growShrink {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.2);
+    }
+  }
