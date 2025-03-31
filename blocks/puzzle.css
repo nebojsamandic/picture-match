@@ -10,13 +10,13 @@
     box-sizing: border-box;
     opacity: 0;
     visibility: hidden;
-    position: absolute;
+    position: relative;
     z-index: 5;
     background: linear-gradient(to center, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 60%) no-repeat center; /* Same gradient effect for fade-in */
     transition: opacity 3s ease, visibility 3s ease;
 }
 
-.puzzle__grid.fade-in {
+.puzzle__grid.fade-in, .puzzle__overlay.fade-in {
     opacity: 1;
     visibility: visible;
     background: linear-gradient(to center, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7) 60%); /* Reverse gradient for fade-in */
@@ -34,7 +34,7 @@
 }
 
 .card {
-    background-color: #f0f0f0;
+    background-color: white;
     border: 1px solid #ddd;
     padding: 20px;
     text-align: center;
@@ -46,5 +46,56 @@
     width: 100%;         
     height: 100%;        
     box-sizing: border-box; 
-    background: linear-gradient(to center, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)); /* Gradient for the card background */
+    background-image: url('/images/puzzle.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background: linear-gradient(to center, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+    background-color: transparent; 
+    color: transparent;
+}
+
+.card.matched {
+    background-color: #4CAF50; 
+    cursor: default;
+}
+
+.card.zoom-out {
+    transform: scale(0.1);
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.card.hidden {
+    pointer-events: none; 
+    visibility: hidden;
+}
+
+.puzzle__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); 
+    z-index: 1;
+    opacity: 0;
+    background: linear-gradient(to center, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 60%) no-repeat center;
+    transition: opacity 1.5s ease, visibility 1.5s ease, filter 1.5s ease;
+}
+
+.clear-background {
+    filter: blur(0px); 
+}
+
+.show-background {
+    opacity: 1;
 }
