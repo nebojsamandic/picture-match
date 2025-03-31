@@ -1,0 +1,37 @@
+/* Heat Mirage Effect */
+.heat-mirage {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: rgba(234, 101, 19, 0.7); 
+    pointer-events: none;
+    z-index: 10;
+    filter: blur(10px) brightness(1.5) contrast(1.2);
+    opacity: 0.7;
+    animation: heatWave 2s infinite ease-in-out;
+}
+
+@keyframes heatWave {
+    0% {
+        transform: translateY(0) scaleX(1);
+        filter: blur(8px);
+    }
+    25% {
+        transform: translateY(-8px) scaleX(1.02);
+        filter: blur(10px);
+    }
+    50% {
+        transform: translateY(-12px) scaleX(1.05);
+        filter: blur(12px);
+    }
+    75% {
+        transform: translateY(-8px) scaleX(1.02);
+        filter: blur(10px);
+    }
+    100% {
+        transform: translateY(0) scaleX(1);
+        filter: blur(8px);
+    }
+}
