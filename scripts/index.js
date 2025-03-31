@@ -1,3 +1,3 @@
-const audio = document.getElemendById('puzzleAudio');
+const audio = document.getElementById('puzzleAudio');
 
 audio.volume = 0.3;
