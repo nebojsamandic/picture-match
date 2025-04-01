@@ -85,7 +85,8 @@ body {
       grid-template-rows: 1fr;  /* Single row */
       gap: 10px;
       padding: 5px;
-      height: calc(100vh - 60px);  /* Adjust height to avoid browser UI at the top */
+      /* Adjust height considering the safe area and browser toolbars */
+      height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 60px);  /* Account for safe areas */
       width: 100vw; /* Ensure grid fits full width of the viewport */
     }
   
@@ -105,6 +106,8 @@ body {
       max-height: 100vh;
       overflow: hidden;
       margin-top: 0;
+      padding-top: env(safe-area-inset-top); /* Ensure safe top area space */
+      padding-bottom: env(safe-area-inset-bottom); /* Ensure safe bottom area space */
     }
     
     /* Ensuring no unexpected overflows */
@@ -114,5 +117,6 @@ body {
       margin: 0;
     }
   }
+  
   
   
