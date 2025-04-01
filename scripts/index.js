@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
         lockBoard = false;
     }
 
-    // Check win condition: when all cards are hidden (matched)
+    // Check win condition: when all cards are hidden matched
     function checkWinCondition() {
         if (document.querySelectorAll(".card.hidden").length === cards.length) {
             puzzleOverlay.classList.add("clear-background");
