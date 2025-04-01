@@ -70,20 +70,22 @@ body {
     }
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 430px) {
+    /* Adjust layout for mobile view */
     .puzzle__start_button {
       margin: 0;
-      font-size: 1.5rem; /* Make button text bigger */
-      width: 80%; /* Increase width for better fit */
-      max-width: 350px; /* Set max-width to avoid stretching */
+      font-size: 1.5rem;  /* Make button text bigger */
+      width: 80%;  /* Increase button width for better fit */
+      max-width: 350px;  /* Set max-width to avoid stretching */
+      padding: 12px 20px; /* Adjust padding */
     }
   
     .puzzle__grid {
       grid-template-columns: repeat(6, 1fr);  /* Adjust grid to fit horizontally */
-      grid-template-rows: 1fr;  /* Only one row */
+      grid-template-rows: 1fr;  /* Single row */
       gap: 10px;
       padding: 5px;
-      height: auto;
+      height: calc(100vh - 60px);  /* Adjust height to avoid browser UI at the top */
       width: 100vw; /* Ensure grid fits full width of the viewport */
     }
   
@@ -96,5 +98,21 @@ body {
     .heat-mirage {
       height: 100px; /* Smaller heat-mirage for smaller screens */
     }
+    
+    /* Adjust for potential viewport intrusions due to browser UI */
+    .page {
+      height: 100vh;
+      max-height: 100vh;
+      overflow: hidden;
+      margin-top: 0;
+    }
+    
+    /* Ensuring no unexpected overflows */
+    html, body {
+      height: 100%;
+      overflow: hidden; /* Prevent any overflow from the body */
+      margin: 0;
+    }
   }
+  
   
