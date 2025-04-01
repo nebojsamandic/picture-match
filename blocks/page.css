@@ -73,26 +73,28 @@ body {
   @media screen and (max-width: 430px) {
     .puzzle__start_button {
       margin: 0;
-      font-size: 1.5rem; 
-      width: 70%;
+      font-size: 1.5rem; /* Make button text bigger */
+      width: 80%; /* Increase width for better fit */
+      max-width: 350px; /* Set max-width to avoid stretching */
     }
   
     .puzzle__grid {
-      grid-template-columns: repeat(6, 1fr);  
-      grid-template-rows: 1fr;  
+      grid-template-columns: repeat(6, 1fr);  /* Adjust grid to fit horizontally */
+      grid-template-rows: 1fr;  /* Only one row */
       gap: 10px;
       padding: 5px;
       height: auto;
-      width: 100vw; 
+      width: 100vw; /* Ensure grid fits full width of the viewport */
     }
   
     .card {
-      font-size: 1rem;  
+      font-size: 1rem;  /* Smaller font for cards */
       padding: 15px;
       background-size: contain;
     }
   
     .heat-mirage {
-      height: 100px; 
+      height: 100px; /* Smaller heat-mirage for smaller screens */
     }
   }
+  
