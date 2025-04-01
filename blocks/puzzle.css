@@ -12,14 +12,14 @@
     visibility: hidden;
     position: relative;
     z-index: 5;
-    background: linear-gradient(to center, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 60%) no-repeat center; /* Same gradient effect for fade-in */
+    background: linear-gradient(to center, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 60%) no-repeat center; 
     transition: opacity 3s ease, visibility 3s ease;
 }
 
 .puzzle__grid.fade-in, .puzzle__overlay.fade-in {
     opacity: 1;
     visibility: visible;
-    background: linear-gradient(to center, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7) 60%); /* Reverse gradient for fade-in */
+    background: linear-gradient(to center, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7) 60%); 
   }
 
 @keyframes fadeIn {

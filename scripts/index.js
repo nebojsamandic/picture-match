@@ -138,15 +138,19 @@ document.addEventListener("DOMContentLoaded", () => {
         lockBoard = false;
     }
 
-    // Check win condition: when all cards are hidden matched
     function checkWinCondition() {
         if (document.querySelectorAll(".card.hidden").length === cards.length) {
             puzzleOverlay.classList.add("clear-background");
             setTimeout(() => {
                 puzzleOverlay.classList.add("show-background");
             }, 1500);
+            
+            setTimeout(() => {
+                puzzleGrid.classList.remove("fade-in");
+                puzzleOverlay.classList.remove("fade-in");
+                startScreen.classList.remove("fade-out");
+                heatMirage.classList.remove("fade-out");
+            }, 12000);
         }
     }
 });
-
-

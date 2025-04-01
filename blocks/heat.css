@@ -18,7 +18,7 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 3s ease, visibility 3s ease;
-    background: linear-gradient(to center, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.7)); /* Reverse the gradient on fade-out */
+    background: linear-gradient(to center, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.7)); 
 }
 
 @keyframes heatWave {

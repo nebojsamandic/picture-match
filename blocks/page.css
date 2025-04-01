@@ -35,7 +35,7 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: opacity 3s ease, visibility 3s ease;
-  background: linear-gradient(to center, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.7)); /* Reverse the gradient on fade-out */
+  background: linear-gradient(to center, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.7)); 
 }
 
 .puzzle__start_button {
@@ -56,7 +56,7 @@ body {
 }
 
 .puzzle__start_button:active {
-  box-shadow: inset 0 8px 15px rgba(0, 0, 0, 0.6); /* Stronger inner shadow */
+  box-shadow: inset 0 8px 15px rgba(0, 0, 0, 0.6); 
   transform: scale(0.98);
 }
 
