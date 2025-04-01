@@ -70,13 +70,13 @@ body {
     }
   }
 
-  @media screen and (max-width: 430px) {
+  @media screen and (max-width: 393px) {
     /* Adjust layout for mobile view */
     .puzzle__start_button {
       margin: 0;
       font-size: 1.5rem;  /* Make button text bigger */
       width: 80%;  /* Increase button width for better fit */
-      max-width: 350px;  /* Set max-width to avoid stretching */
+      max-width: 800px;  /* Set max-width to avoid stretching */
       padding: 12px 20px; /* Adjust padding */
     }
   
@@ -102,8 +102,8 @@ body {
     
     /* Adjust for potential viewport intrusions due to browser UI */
     .page {
-      height: 100vh;
-      max-height: 100vh;
+      height: 800px;
+      max-height: 350px;
       overflow: hidden;
       margin-top: 0;
       padding-top: env(safe-area-inset-top); /* Ensure safe top area space */
