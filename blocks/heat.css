@@ -43,3 +43,10 @@
         filter: blur(8px);
     }
 }
+
+
+@media screen and (max-width: 430px) {
+    .heat-mirage {
+      height: 100px; /* Smaller heat-mirage for smaller screens */
+    }
+  }

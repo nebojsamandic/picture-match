@@ -69,3 +69,30 @@ body {
       transform: scale(1.2);
     }
   }
+
+  @media screen and (max-width: 430px) {
+    .puzzle__start_button {
+      margin: 0;
+      font-size: 1.5rem; 
+      width: 70%;
+    }
+  
+    .puzzle__grid {
+      grid-template-columns: repeat(6, 1fr);  
+      grid-template-rows: 1fr;  
+      gap: 10px;
+      padding: 5px;
+      height: auto;
+      width: 100vw; 
+    }
+  
+    .card {
+      font-size: 1rem;  
+      padding: 15px;
+      background-size: contain;
+    }
+  
+    .heat-mirage {
+      height: 100px; 
+    }
+  }
