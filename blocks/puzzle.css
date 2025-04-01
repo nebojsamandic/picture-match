@@ -99,24 +99,3 @@
 .show-background {
     opacity: 1;
 }
-
-
-@media screen and (max-width: 430px) {
-    .puzzle__grid {
-      grid-template-columns: repeat(3, 1fr);  /* Adjust grid to fit smaller screen */
-      grid-template-rows: repeat(3, 1fr); 
-      gap: 10px;
-      padding: 5px;
-      height: auto;
-    }
-  
-    .card {
-      font-size: 1rem;  /* Smaller font for cards */
-      padding: 15px;
-      background-size: contain;
-    }
-  
-    .heat-mirage {
-      height: 100px; /* Smaller heat-mirage for smaller screens */
-    }
-  }

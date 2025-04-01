@@ -72,51 +72,58 @@ body {
 
   @media screen and (max-width: 393px) {
     /* Adjust layout for mobile view */
+    
+    /* Ensure the start button is within the bounds */
     .puzzle__start_button {
       margin: 0;
       font-size: 1.5rem;  /* Make button text bigger */
       width: 80%;  /* Increase button width for better fit */
-      max-width: 800px;  /* Set max-width to avoid stretching */
+      max-width: 300px;  /* Set max-width to avoid stretching */
       padding: 12px 20px; /* Adjust padding */
+      display: block; /* Ensure button is block-level for proper alignment */
+      margin-left: auto;
+      margin-right: auto; /* Center the button */
     }
   
+    /* Adjust the grid layout */
     .puzzle__grid {
-      grid-template-columns: repeat(6, 1fr);  /* Adjust grid to fit horizontally */
-      grid-template-rows: 1fr;  /* Single row */
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);  /* Adjust grid to fit horizontally with 4 columns */
+      grid-template-rows: auto;  /* Allow rows to adjust based on content */
       gap: 10px;
       padding: 5px;
-      /* Adjust height considering the safe area and browser toolbars */
-      height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 60px);  /* Account for safe areas */
-      width: 100vw; /* Ensure grid fits full width of the viewport */
+      width: 100%; /* Ensure grid fits full width */
+      height: calc(100vh - 60px - env(safe-area-inset-top) - env(safe-area-inset-bottom)); /* Account for safe areas and avoid overflow */
+      overflow: hidden; /* Prevent overflow */
     }
   
+    /* Card adjustments */
     .card {
       font-size: 1rem;  /* Smaller font for cards */
       padding: 15px;
       background-size: contain;
+      text-align: center;  /* Ensure text is centered inside cards */
     }
   
     .heat-mirage {
-      height: 100px; /* Smaller heat-mirage for smaller screens */
+      height: 50px; /* Smaller heat-mirage for smaller screens */
     }
-    
-    /* Adjust for potential viewport intrusions due to browser UI */
+  
+    /* Page layout */
     .page {
-      height: 800px;
-      max-height: 350px;
+      height: 100vh;
+      width: 100vw; /* Ensure page uses the full width of the screen */
       overflow: hidden;
-      margin-top: 0;
       padding-top: env(safe-area-inset-top); /* Ensure safe top area space */
       padding-bottom: env(safe-area-inset-bottom); /* Ensure safe bottom area space */
     }
-    
-    /* Ensuring no unexpected overflows */
+  
+    /* Body and HTML settings */
     html, body {
       height: 100%;
-      overflow: hidden; /* Prevent any overflow from the body */
       margin: 0;
+      overflow: hidden; /* Prevent any overflow from the body */
     }
   }
-  
   
   
